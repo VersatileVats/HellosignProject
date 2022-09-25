@@ -1,0 +1,5 @@
+{
+    "require": {
+        "hellosign/hellosign-php-sdk":"6.0.0-beta22"
+    }
+}
