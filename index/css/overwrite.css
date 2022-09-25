@@ -1,0 +1,59 @@
+section {
+  padding: 4rem 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  color: #fff;
+  background-color: #00ffff !important;
+}
+
+.text-primary {
+  color: purple !important;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+  color: #0dcaf0 !important;
+}
+
+#mainNav.navbar-shrink .navbar-brand {
+  color: #0dcaf0 !important;
+}
+
+.portfolio-box .portfolio-box-caption {
+  background: rgb(13, 202, 240, 0.9);
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+hr {
+  border-color: black !important;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#video-play {
+  position: relative;
+  height: 200px;
+  background: url("../../img/hand.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  color: #fff;
+}
+
+#video-play a {
+  color: #fff;
+}
