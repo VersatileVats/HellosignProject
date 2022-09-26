@@ -9,6 +9,11 @@ I have captured it using Dropbox Capture and what I found that it was having som
 
 Also, as I have laready mentioned in the devpost docuemntation, that there are 3 instances where I am using HelloWorks/HelloSign. And the snippet og their workflows are presnet below:
 
+<img width="566" alt="hw1" src="https://user-images.githubusercontent.com/57909173/192222675-e3bf8283-8a69-4031-afa2-bda8011ee1de.png">
 
+
+<img width="581" alt="hw2" src="https://user-images.githubusercontent.com/57909173/192222687-e88dc5a3-568f-48ce-8658-bfd82116224f.png">
+
+<img width="581" alt="hw3" src="https://user-images.githubusercontent.com/57909173/192222718-5987fbb8-176d-45d8-a574-7412356ac5c7.png">
 
 The files mentioned in the snippets are the ones handling all the BETA SDK & API Calls for HelloSign and HelloWorks.
