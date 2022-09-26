@@ -34,14 +34,14 @@ require 'utilities/common.php';
                                     </div>
                                     
                                     <form action="utilities/login_script.php" method="post" class="user">
-                                        <div class="mb-3"><input class="form-control form-control-user" style="border: black 2px solid" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email">
+                                        <div class="mb-3"><input class="form-control form-control-user" style="border: black 2px solid" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" required>
                                             <?php if(isset($_GET['emailError'])) { ?>
-                                                <p class="text-center text-danger"><b><?php echo $_GET['emailError'] ?></b></p>
+                                                <p class="text-center text-danger"><b>'Provided email is not registered yet'</b></p>
                                             <?php } ?>
                                         </div>
-                                        <div class="mb-3"><input class="form-control form-control-user" style="border: black 2px solid" type="password" placeholder="Password" name="password">
+                                        <div class="mb-3"><input class="form-control form-control-user" style="border: black 2px solid" type="password" placeholder="Password" name="password" required>
                                         <?php if(isset($_GET['pwdError'])) { ?>
-                                            <p class="text-center text-danger"><b><?php echo $_GET['pwdError'] ?></b></p>
+                                            <p class="text-center text-danger"><b>'Incorrect password'</b></p>
                                         <?php } ?>
                                         </div>
                                         
@@ -54,17 +54,18 @@ require 'utilities/common.php';
                                         </div>
                                             <?php if(isset($_GET['roleError'])) { ?>
                                                 <p class="text-center text-danger"><b><?php echo $_GET['roleError'] ?></b></p>
-                                            <?php } elseif($_GET['sessionError']) { ?>
-                                                <p class="text-center text-danger"><b><?php echo $_GET['sessionError'] ?></b></p>
+                                            <?php } elseif(isset($_GET['sessionError'])) { ?>
+                                                <p class="text-center text-danger"><b>'Already logged in with another device. You can only access your account with single device at a time'</b></p>
                                             <?php } ?>
                                         <button class="btn btn-primary d-block btn-user w-100" type="submit" style="font-weight: bold">Login</button>
                                         
                                         <hr>
                                     </form>
                                     
-                                    <div class="text-center">
+                                    <div class="text-center" style="cursor: pointer">
                                         <a class="small" href="register.php">Create an Account!</a>
-                                        <a id="forgot_pwd" class="small m-2" style="cursor: pointer; display: none" onclick="giveEmail()">Forgot password?</a>
+                                        <a class="small m-2" href="play.php">Homepage</a>
+                                        <a id="forgot_pwd" class="small m-2" style="display: none" onclick="giveEmail()">Forgot password?</a>
                                     </div>
                                 </div>
                             </div>
