@@ -7,7 +7,7 @@ Link: https://capture.dropbox.com/p7LLptjfj7xz8SkB
 
 I have captured it using Dropbox Capture and what I found that it was having some problems in capturing the system's sound and that is why in the video sometimes you hear beeped sound when Alan is giving out responses.
 
-Also, as I have laready mentioned in the devpost docuemntation, that there are 3 instances where I am using HelloWorks/HelloSign. And the snippet og their workflows are presnet below:
+Also, as I have laready mentioned in the devpost docuemntation, that there are 3 instances where I am using HelloWorks/HelloSign. And the snippet of their workflows are presnet below:
 
 <img width="566" alt="hw1" src="https://user-images.githubusercontent.com/57909173/192222675-e3bf8283-8a69-4031-afa2-bda8011ee1de.png">
 
