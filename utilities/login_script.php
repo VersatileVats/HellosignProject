@@ -39,16 +39,16 @@ $row2 = mysqli_fetch_array($result_query6);
 # If the email doesn't exists:
 if ($role=="Hospital") {
     if(mysqli_num_rows($result_query1) == 0) {
-     header("location: ./../login.php?emailError='Provided email is not registered yet'"); 
+     header("location: ./../login.php?emailError"); 
     }
     
     # If the entered password is wrong:
     else if (mysqli_num_rows($result_query2) == 0) {
-        header("location: ./../login.php?pwdError='Incorrect password'");
+        header("location: ./../login.php?pwdError");
     }
     
     else if($row['logged_in'] == "true") {
-        header("location: ./../login.php?sessionError='Already logged in with another device. You can only access your account with single device at a time'");
+        header("location: ./../login.php?sessionError");
         }
     else {
         $update_query = "UPDATE hospitals SET logged_in = 'true' WHERE h_email = '$email'";
@@ -74,10 +74,10 @@ if ($role=="Hospital") {
 }
 else if($role == "Patient") {
     if(mysqli_num_rows($result_query4) == 0) {
-     header("location: ./../login.php?emailError='Provided patient email is not registered yet'");
+     header("location: ./../login.php?emailError");
     }
     else if (mysqli_num_rows($result_query3) == 0) {
-        header("location: ./../login.php?pwdError='Incorrect password'");
+        header("location: ./../login.php?pwdError");
     }
     else {
         $_SESSION['age'] = $row1['age'];
@@ -96,10 +96,10 @@ else if($role == "Patient") {
 } 
 else if($role == "Doctor") {
     if(mysqli_num_rows($result_query5) == 0) {   
-     header("location: ./../login.php?emailError='Provided email is not registered yet'");
+     header("location: ./../login.php?emailError");
     }
     else if (mysqli_num_rows($result_query6) == 0) {
-        header("location: ./../login.php?pwdError='Incorrect password'");   
+        header("location: ./../login.php?pwdError");   
     }
     else {
         $_SESSION['h_id'] = $row2['h_id'];
