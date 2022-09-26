@@ -34,9 +34,9 @@ $name = mysqli_real_escape_string($connect, $name);
 
 $email = $_POST['h_email'];
 $pwd = $_POST['password'];
-$pwd = $pwd;
-$conf_pwd = $_POST['password_repeat'];
-$conf_pwd = mysqli_real_escape_string($connect, $conf_pwd);
+$user_pwd = $pwd;
+$user_conf_pwd = $_POST['password_repeat'];
+$user_conf_pwd = mysqli_real_escape_string($connect, $user_conf_pwd);
 
 $beds = $_POST['beds'];
 $beds = mysqli_real_escape_string($connect, $beds);
@@ -58,18 +58,18 @@ $row = mysqli_num_rows($result_search_query);
 
 // check whether more than 2 records are there in the database, then deny the user
 if ($row !=0 or $row1 !=0) {
-    echo ("<script>alert('Email address already exists! Log in with another email'); location.href='./../register.php'</script>");
+    header("location: ./../register.php?emailError"); 
 }
 // If the user entered pwd doesn't matches with the password pattern:
 elseif (!preg_match($pwd_pattern, $pwd) and !preg_match($pwd_pattern,$user_pwd)) {
-    echo ("<script>alert('Not a valid password. Password must contain a minimum of 8 characters, atleast 1 number, 1 letter & 1 special character'); location.href='./../register.php'</script>");
+    header("location: ./../register.php?pwdError");
 }
 elseif (!preg_match($email_pattern, $email) and !preg_match($email_pattern, $user_email)) {
-    echo ("<script>alert('Not a valid email address'); location.href='./../register.php'</script>");
+    header("location: ./../register.php?emailError1");
 }
 // if the pwd & confirm pwd doesn't match
-elseif ($conf_pwd != $pwd and $user_conf_pwd != $user_pwd) {
-    echo ("<script>alert('New password and confirm password doesn\'t match'); location.href='./../register.php'</script>");
+elseif ($user_conf_pwd != $user_pwd) {
+    header("location: ./../register.php?pwdError1");
 }
 // if all the entered data is correct, then do the manipulations
 else {
